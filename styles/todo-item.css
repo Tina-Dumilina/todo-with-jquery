@@ -1,0 +1,67 @@
+.todo-item {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.todo-item:last-child {
+  margin-bottom: 0;
+}
+
+.todo-item__header {
+  min-height: 50px;
+  padding: 16px 20px;
+  padding-right: 24px;
+}
+
+.todo-item__heading {
+  float: left;
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.todo-item__descr {
+  margin: 0;
+  padding: 10px 20px;
+  min-height: 86px;
+  font-size: 13px;
+  color: #8993ad;
+  border-top: 1px solid #f5f5f5; 
+}
+
+.todo-item__delete {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 0 13px;
+  vertical-align: middle;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAABJQTFRFAAAA3Rwt3Rwt1Ssr3hst3hss/uEX/wAAAAZ0Uk5TAFuvBv+yhqujeAAAAE9JREFUeJxjEDJgAANmRQaVYAjT1InB1BUszBwSDMYgQZAImIAIgEmoMiAFVQUShgqChKGCIGGYIDIToQBJG8IwJCsQFiM5B8mRSE5HeAgAonIWc6UfJYIAAAAASUVORK5CYII=");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center center;
+  color: #d80027;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item__toggle {
+  float: right;
+  margin-top: 8px;
+  padding: 0;
+  border: none;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+  border-top: 5px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: transform .2s ease;
+}
+
+.todo-item__toggle_rotate {
+  transform: rotate(90deg);
+  transition: transform .2s ease;
+}

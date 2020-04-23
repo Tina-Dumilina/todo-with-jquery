@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модуль 4</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/column.css">
+  <link rel="stylesheet" href="styles/columns.css">
+  <link rel="stylesheet" href="styles/new-todo.css">
+  <link rel="stylesheet" href="styles/todo-item.css">
+  <link rel="stylesheet" href="styles/todo-items.css">
+</head>
+
+<body>
+  <h1 class="visually-hidden">Ваш список дел</h1>
+
+  <div class="columns clearfix">
+    <section class="column column_float_left">
+      <h2 class="column__title">Список дел:</h2>
+
+      <p class="todo-items__none js-noItems">Список пуст...</p>
+      <ul class="todo-items js-list"></ul>
+    </section>
+
+    <section class="column column_float_right">
+      <h2 class="column__title">Добавить новое дело</h2>
+      <div class="new-todo">
+
+        <form class="new-todo__form js-form">
+          <label class="new-todo__label" for="title">
+            * Название
+          </label>
+          <input type="text" class="new-todo__field new-todo__heading js-addHeading" name="todo-heading" id="title" required>
+
+          <label class="new-todo__label" for="description">
+            * Описание
+          </label>
+          <textarea class="new-todo__field new-todo__descr js-addDescription" name="todo-descr" id="description" ></textarea>
+
+          <button type="submit" class="new-todo__button js-addBtn">Добавить дело</button>
+        </form>
+
+      </div>
+    </section>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
