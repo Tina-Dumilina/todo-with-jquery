@@ -24,8 +24,7 @@
 
 .todo-item__descr {
   margin: 0;
-  padding: 10px 20px;
-  min-height: 86px;
+  padding: 10px 20px 61px;
   font-size: 13px;
   color: #8993ad;
   border-top: 1px solid #f5f5f5; 

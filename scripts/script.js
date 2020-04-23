@@ -41,7 +41,7 @@ $(function () {
 
   listElem.on('click', '.js-toggleBtn', function () {
     const itemContentElem = $('.js-itemContent');
-    $(this).parents(itemContentElem).children('.js-itemDescription').slideToggle(1000);
+    $(this).parents(itemContentElem).children('.js-itemDescription').slideToggle(200);
     $('.todo-item__toggle').toggleClass('todo-item__toggle_rotate');
   });
 });
