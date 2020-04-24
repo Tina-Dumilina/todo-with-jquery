@@ -17,7 +17,7 @@ $(function () {
           <header class="todo-item__header">
             <h3 class="todo-item__heading">${toDoTitleElemValue}</h3>
             <button type="button" class="todo-item__delete button js-deleteBtn" aria-label="Удалить дело"></button>
-            <button type="button" class="todo-item__toggle button js-toggleBtn aria-hidden="true"></button>
+            <button type="button" class="todo-item__toggle button js-toggleBtn" aria-label="Свернуть описание"></button>
           </header>
           <p class="todo-item__descr js-itemDescription">${toDoDescrElemValue}</p>
         </article>
@@ -25,14 +25,13 @@ $(function () {
     `);
 
     noItemsElem.hide();
-    formElem[0].reset();
+    this.reset();
   }
 
   formElem.on('submit', formSubmitHandler);
 
-  $('body').on('click', '.js-deleteBtn', function () {
-    const item = $(this).closest('.js-item');
-    item.remove();
+  listElem.on('click', '.js-deleteBtn', function () {
+    $(this).closest('.js-item').remove();
 
     if (listElem.children().length === 0) {
       noItemsElem.show();
@@ -43,5 +42,7 @@ $(function () {
     const itemContentElem = $('.js-itemContent');
     $(this).parents(itemContentElem).children('.js-itemDescription').slideToggle(200);
     $('.todo-item__toggle').toggleClass('todo-item__toggle_rotate');
+
+    $(this).attr('aria-label') === 'Свернуть описание' ? $(this).attr('aria-label', 'Раскрыть описание') : $(this).attr('aria-label', 'Свернуть описание');
   });
 });
